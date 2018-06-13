@@ -1,10 +1,6 @@
 ﻿using NBitcoin;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace ExpCoin
 {
@@ -12,22 +8,43 @@ namespace ExpCoin
     {
         static void Main(string[] args)
         {
-            Key privateKey = new Key(); // generate a random private key
+            RandomUtils.Random = new UnsecureRandom();
 
-            PubKey publicKey = privateKey.PubKey;
-            Console.WriteLine(publicKey); // 0251036303164f6c458e9f7abecb4e55e5ce9ec2b2f1d06d633c9653a07976560c
-
-            Console.WriteLine(publicKey.GetAddress(Network.Main)); // 1PUYsjwfNmX64wS368ZR5FMouTtUmvtmTY
-            Console.WriteLine(publicKey.GetAddress(Network.TestNet)); // n3zWAo2eBnxLr3ueohXnuAa8mTVBhxmPhq
-
-            var publicKeyHash = publicKey.Hash;
-            Console.WriteLine(publicKeyHash); // f6889b21b5540353a29ed18c45ea0031280c42cf
-            var mainNetAddress = publicKeyHash.GetAddress(Network.Main);
-            var testNetAddress = publicKeyHash.GetAddress(Network.TestNet);
-
-            Console.WriteLine(mainNetAddress); // 1PUYsjwfNmX64wS368ZR5FMouTtUmvtmTY
-            Console.WriteLine(testNetAddress); // n3zWAo2eBnxLr3ueohXnuAa8mTVBhxmPhq
-
+            Key subbuPrivateKey = new Key(); Key swethaPrivateKey = new Key();
+            Key adityaPrivateKey = new Key(); Key kavyaPrivateKey = new Key();
+            BitcoinSecret subbu = subbuPrivateKey.GetBitcoinSecret(Network.Main);
+            BitcoinSecret swetha = swethaPrivateKey.GetBitcoinSecret(Network.Main);
+            BitcoinSecret aditya = adityaPrivateKey.GetBitcoinSecret(Network.Main);
+            BitcoinSecret kavya = kavyaPrivateKey.GetBitcoinSecret(Network.Main);
+            decimal subbuCoin1 = 0;
+            decimal subbuCoin2 = 0;
+            decimal sendAmount = 0;
+            Console.WriteLine("\n Enter first coin value:");
+            subbuCoin1 = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("\n Enter second coin value:");
+            subbuCoin2 = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("\n Enter Send amount:");
+            sendAmount = Convert.ToDecimal(Console.ReadLine());
+            Transaction subbuFunding = new Transaction() {
+                Outputs =
+    {
+        new TxOut(subbuCoin1.ToString(), subbu.GetAddress()),
+        new TxOut(subbuCoin2.ToString(), subbu.PubKey)
+    }
+            };
+            Coin[] subbuCoins = subbuFunding
+                                    .Outputs
+                                    .Select((o, i) => new Coin(new OutPoint(subbuFunding.GetHash(), i), o))
+                                    .ToArray();
+            var txBuilder = new TransactionBuilder();
+            var tx = txBuilder
+                .AddCoins(subbuCoins)
+                .AddKeys(subbu.PrivateKey)
+                .Send(swetha.GetAddress(), sendAmount.ToString())
+                .SendFees("0.001")
+                .SetChange(subbu.GetAddress())
+                .BuildTransaction(true);
+            Console.WriteLine(tx);
             Console.ReadLine();
         }
     }

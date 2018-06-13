@@ -1,2 +1,12 @@
 C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\ExpCoin.exe.config
 C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\ExpCoin.exe.config
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\ExpCoin.exe
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\ExpCoin.pdb
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\NBitcoin.dll
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\Newtonsoft.Json.dll
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\NBitcoin.xml
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\Newtonsoft.Json.xml
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\obj\Debug\ExpCoin.csprojResolveAssemblyReference.cache
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\obj\Debug\ExpCoin.exe
+C:\MyData\Projects\BlockChain\ExpCoin\ExpCoin\ExpCoin\obj\Debug\ExpCoin.pdb
