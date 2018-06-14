@@ -8,17 +8,17 @@ namespace ExpCoin
     {
         static void Main(string[] args)
         {
+            decimal sendAmount = 0;
             RandomUtils.Random = new UnsecureRandom();
 
             Key subbuPrivateKey = new Key(); Key swethaPrivateKey = new Key();
             Key adityaPrivateKey = new Key(); Key kavyaPrivateKey = new Key();
+
             BitcoinSecret subbu = subbuPrivateKey.GetBitcoinSecret(Network.Main);
             BitcoinSecret swetha = swethaPrivateKey.GetBitcoinSecret(Network.Main);
             BitcoinSecret aditya = adityaPrivateKey.GetBitcoinSecret(Network.Main);
             BitcoinSecret kavya = kavyaPrivateKey.GetBitcoinSecret(Network.Main);
-            decimal subbuCoin1 = 0;
-            decimal subbuCoin2 = 0;
-            decimal sendAmount = 0;
+
             Console.WriteLine("\n Enter first coin value:");
             subbuCoin1 = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("\n Enter second coin value:");
