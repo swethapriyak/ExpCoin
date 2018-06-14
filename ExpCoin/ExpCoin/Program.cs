@@ -8,7 +8,10 @@ namespace ExpCoin
     {
         static void Main(string[] args)
         {
+            decimal subbuCoin1 = 0;
+            decimal subbuCoin2 = 0;
             decimal sendAmount = 0;
+
             RandomUtils.Random = new UnsecureRandom();
 
             Key subbuPrivateKey = new Key(); Key swethaPrivateKey = new Key();
