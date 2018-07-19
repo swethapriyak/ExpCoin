@@ -9,21 +9,13 @@ namespace ExpCoin
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
             int blockCount = 0;
             int option = 0;
             ConcurrentChain chain = new ConcurrentChain(Network.Main);
             DateTimeOffset now = DateTimeOffset.UtcNow;
             List<Transaction> txList = new List<Transaction>();
-=======
-            decimal subbuCoin1 = 0;
-            decimal subbuCoin2 = 0;
-            decimal sendAmount = 0;
-
->>>>>>> 2c1cf054e68e22bb3e71fcfee47b62200b58fcea
             RandomUtils.Random = new UnsecureRandom();
             Key subbuPrivateKey = new Key(); Key swethaPrivateKey = new Key();
-<<<<<<< HEAD
             // Key adityaPrivateKey = new Key(); Key kavyaPrivateKey = new Key();
             BitcoinSecret subbu = subbuPrivateKey.GetBitcoinSecret(Network.Main);
             BitcoinSecret swetha = swethaPrivateKey.GetBitcoinSecret(Network.Main);
@@ -32,15 +24,6 @@ namespace ExpCoin
             decimal subbuCoin1 = 0;
             decimal subbuCoin2 = 0;
             decimal sendAmount = 0;
-=======
-            Key adityaPrivateKey = new Key(); Key kavyaPrivateKey = new Key();
-
-            BitcoinSecret subbu = subbuPrivateKey.GetBitcoinSecret(Network.Main);
-            BitcoinSecret swetha = swethaPrivateKey.GetBitcoinSecret(Network.Main);
-            BitcoinSecret aditya = adityaPrivateKey.GetBitcoinSecret(Network.Main);
-            BitcoinSecret kavya = kavyaPrivateKey.GetBitcoinSecret(Network.Main);
-
->>>>>>> 2c1cf054e68e22bb3e71fcfee47b62200b58fcea
             Console.WriteLine("\n Enter first coin value:");
             subbuCoin1 = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("\n Enter second coin value:");
