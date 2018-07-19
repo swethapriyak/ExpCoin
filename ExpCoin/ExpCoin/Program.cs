@@ -16,9 +16,9 @@ namespace ExpCoin
             List<Transaction> txList = new List<Transaction>();
             RandomUtils.Random = new UnsecureRandom();
             Key subbuPrivateKey = new Key(); Key swethaPrivateKey = new Key();
-            // Key adityaPrivateKey = new Key(); Key kavyaPrivateKey = new Key();
             BitcoinSecret subbu = subbuPrivateKey.GetBitcoinSecret(Network.Main);
             BitcoinSecret swetha = swethaPrivateKey.GetBitcoinSecret(Network.Main);
+            // Key adityaPrivateKey = new Key(); Key kavyaPrivateKey = new Key();
             //BitcoinSecret aditya = adityaPrivateKey.GetBitcoinSecret(Network.Main);
             //BitcoinSecret kavya = kavyaPrivateKey.GetBitcoinSecret(Network.Main);
             decimal subbuCoin1 = 0;
@@ -68,24 +68,6 @@ namespace ExpCoin
                 blockCount++;
                 option = 0;
             }
-            //Console.WriteLine("\n Create genesis block:");
-            //Console.ReadLine();
-            //Console.WriteLine("Genesis block craeted:"+ExpCoin.Program.GetFirstBitcoinAddressEver(tx));
-            //Console.ReadLine();
-
-            //ChainedBlock block =ExpCoin.Program.CreateBlock(DateTimeOffset.Now, 1);
-        }
-
-        private static string GetFirstBitcoinAddressEver(Transaction tx)
-        {
-            var genesisBlock = Network.Main.GetGenesis();
-            genesisBlock.Transactions.Add(tx);
-            var firstTransactionEver = genesisBlock.Transactions.First();
-            var firstOutputEver = firstTransactionEver.Outputs.First();
-            var firstScriptPubKeyEver = firstOutputEver.ScriptPubKey;
-            var firstPubKeyEver = firstScriptPubKeyEver.GetDestinationPublicKeys().First();
-            var firstBitcoinAddressEver = firstPubKeyEver.GetAddress(Network.Main);
-            return firstBitcoinAddressEver.ToString();
         }
 
         private static ChainedBlock CreateBlock(DateTimeOffset now, int offset, List<Transaction> txList, ChainBase chain = null)
@@ -103,5 +85,25 @@ namespace ExpCoin
             else
                 return new ChainedBlock(b.Header, 0);
         }
+
+        //private static string GetFirstBitcoinAddressEver(Transaction tx)
+        //{
+        //    var genesisBlock = Network.Main.GetGenesis();
+        //    genesisBlock.Transactions.Add(tx);
+        //    var firstTransactionEver = genesisBlock.Transactions.First();
+        //    var firstOutputEver = firstTransactionEver.Outputs.First();
+        //    var firstScriptPubKeyEver = firstOutputEver.ScriptPubKey;
+        //    var firstPubKeyEver = firstScriptPubKeyEver.GetDestinationPublicKeys().First();
+        //    var firstBitcoinAddressEver = firstPubKeyEver.GetAddress(Network.Main);
+        //    return firstBitcoinAddressEver.ToString();
+
+
+        //    //Console.WriteLine("\n Create genesis block:");
+        //    //Console.ReadLine();
+        //    //Console.WriteLine("Genesis block craeted:"+ExpCoin.Program.GetFirstBitcoinAddressEver(tx));
+        //    //Console.ReadLine();
+
+        //    //ChainedBlock block =ExpCoin.Program.CreateBlock(DateTimeOffset.Now, 1);
+        //}
     }
 }
