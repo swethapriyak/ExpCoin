@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpCoin", "ExpCoin\ExpCoin.csproj", "{1A675A8D-375D-4347-BC14-75393450CB96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpCoinP2P", "ExpCoinP2P\ExpCoinP2P.csproj", "{6CA0856C-625A-4EEB-BB4E-DD76208A70E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{1A675A8D-375D-4347-BC14-75393450CB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A675A8D-375D-4347-BC14-75393450CB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A675A8D-375D-4347-BC14-75393450CB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA0856C-625A-4EEB-BB4E-DD76208A70E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA0856C-625A-4EEB-BB4E-DD76208A70E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA0856C-625A-4EEB-BB4E-DD76208A70E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA0856C-625A-4EEB-BB4E-DD76208A70E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

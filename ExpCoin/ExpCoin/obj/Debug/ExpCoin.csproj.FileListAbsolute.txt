@@ -20,3 +20,5 @@ C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\System.Runt
 C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\NBitcoin.xml
 C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\obj\Debug\ExpCoin.csprojResolveAssemblyReference.cache
+C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\websocket-sharp.clone.dll
+C:\Users\Swetha\Desktop\BlockChain\ExpCoin\ExpCoin\ExpCoin\bin\Debug\websocket-sharp.clone.xml
